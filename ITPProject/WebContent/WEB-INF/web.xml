@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ITP WEB DEVELOPMENT</display-name>
+ 
+  <servlet>
+    <servlet-name>AddFinancialServlet</servlet-name>
+    <servlet-class>com.ITP.servlet.AddFinancialServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateFinancialServlet</servlet-name>
+    <servlet-class>com.ITP.servlet.UpdateFinancialServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFinancialServlet</servlet-name>
+    <servlet-class>com.ITP.servlet.DeleteFinancialServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetFinancialServlet</servlet-name>
+    <servlet-class>com.ITP.servlet.GetFinancialServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListFinancialServlet</servlet-name>
+    <servlet-class>com.ITP.servlet.ListFinancialServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddFinancialServlet</servlet-name>
+    <url-pattern>/AddFinancialServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateFinancialServlet</servlet-name>
+    <url-pattern>/UpdateFinancialServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DeleteFinancialServlet</servlet-name>
+    <url-pattern>/DeleteFinancialServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetFinancialServlet</servlet-name>
+    <url-pattern>/GetFinancialServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ListFinancialServlet</servlet-name>
+    <url-pattern>/ListFinancialServlet</url-pattern>
+  </servlet-mapping>
+ 
+ 
+    <welcome-file-list>
+    <welcome-file>homeView.html</welcome-file>
+    <welcome-file>homeView.htm</welcome-file>
+    <welcome-file>homeView.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>

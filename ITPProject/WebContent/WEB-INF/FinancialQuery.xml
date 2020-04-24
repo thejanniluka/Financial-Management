@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Querys>
+
+	<query id="create_financial_table">
+        <![CDATA[
+            CREATE TABLE financial(
+				MonthID varchar(10) not null,
+				PhoneCost int(20),
+				WaterCost int(15),
+				TransportCost int(15),
+				ExpensesCost int(15),
+				Income  int(50),
+				NetProfit int(40),
+				primary key (MonthID)
+			);
+        ]]>
+	</query>
+
+	
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS  financial 
+        ]]>
+	</query>
+
+	
+	<query id="insert_financial">
+        <![CDATA[
+          	insert into financial(MonthID, PhoneCost, WaterCost, TransportCost,
+          	 ExpensesCost, Income,NetProfit) 
+          	values (?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	
+	<query id="financial_by_id">
+         <![CDATA[        
+            select * from financial where financial.MonthID = ?
+        ]]>
+	</query>
+
+
+	<query id="all_financials">
+         <![CDATA[        
+            select * from financial
+        ]]>
+	</query>
+
+	
+	<query id="remove_financial">
+         <![CDATA[        
+            delete from financial where financial.MonthID = ?
+        ]]>
+	</query>
+	
+
+	<query id="update_financial">
+         <![CDATA[        
+            update financial as e 
+            set e.PhoneCost = ?, e. WaterCost = ?, e.TransportCost = ?, e.ExpensesCost = ?, e.Income = ?, e.NetProfit = ? 
+            where e.MonthID = ?
+        ]]>
+	</query>
+	
+		
+	<query id="financial_ids">
+         <![CDATA[        
+            select e.MonthID from financial as e
+        ]]>
+	</query>
+
+</Querys>
